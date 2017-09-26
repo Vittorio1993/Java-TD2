@@ -14,20 +14,20 @@ public class Ligne {
     private Integer noLigne;
     ArrayList<Station>lstStation;
     
-    public void Linge(Integer n, Station dep, Station arr){
+    public void Ligne(Integer n, Station dep, Station arr){
         noLigne=n;
         lstStation = new ArrayList<>(); 
         lstStation.add(0,dep);
-        lstStation.add(lstStation.size()-1,arr);
+        lstStation.add(lstStation.size(),arr);
         
     }
     
     
     
     public void afficher(){
-        System.out.println("Le nom de ligne est "+this.getNoLinge());
+        System.out.println("Le numéro de ligne est "+this.getNoLinge()+" :");
         for(int i=0;i<lstStation.size();i++){    
-            System.out.println("Le no."+i+" Station est "+lstStation.get(i).getNom());
+            System.out.println("Le no."+(i+1)+" Station est "+lstStation.get(i).getNom());
         }
        
     }
@@ -50,15 +50,16 @@ public class Ligne {
         
     }
     
-    public Boolean stationDesservie(Station vérifier ){
+    public Boolean stationDesservie(Station vérifier){
         Boolean reponse = false;
         for(int i=0;i<lstStation.size();i++){
             if(vérifier==lstStation.get(i)){
                 reponse= true;
             }
         }
+       
         return reponse;
-    }   
+    }
 }
 
 

@@ -5,6 +5,7 @@
  */
 package td2.exo;
 
+
 /**
  *
  * @author zhanghuakai
@@ -12,7 +13,9 @@ package td2.exo;
 public class Station {
     private String nom;
     
+    
     public void init (String n){
+       
         nom=n;
     }
     
